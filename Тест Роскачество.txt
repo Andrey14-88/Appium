@@ -1,0 +1,266 @@
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidTouchAction;
+import io.appium.java_client.touch.offset.PointOption;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.*;
+import static org.junit.Assert.*;
+
+
+public class TestR extends Components {
+
+
+    @Test
+
+    public void roskachestvo(){
+        MobileElement lavHome = null;
+        try {
+             lavHome = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("theappshop.roskachestvo:id/lav_home")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(lavHome != null );
+
+        MobileElement favorites = (MobileElement)wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.FrameLayout[@content-desc=\"Избранное\"]/android.widget.ImageView")));
+        favorites.click();
+
+        MobileElement TextFavorites = null;
+        try {
+            TextFavorites = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.TextView")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(TextFavorites != null );
+
+
+        MobileElement ShoppingList = (MobileElement)wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.FrameLayout[@content-desc=\"Список покупок\"]/android.widget.ImageView")));
+        ShoppingList.click();
+
+        MobileElement TextShoppingList = null;
+        try {
+            TextShoppingList = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.view.ViewGroup/android.widget.TextView")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(TextShoppingList != null );
+
+        MobileElement EcoLabels = (MobileElement)wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.FrameLayout[@content-desc=\"Экомаркировки\"]/android.widget.ImageView")));
+        EcoLabels.click();
+
+        MobileElement TextEcoLabels = null;
+        try {
+            TextEcoLabels = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.TextView")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(TextEcoLabels != null );
+        MobileElement homePage = (MobileElement)wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.FrameLayout[@content-desc=\"Главная\"]/android.widget.ImageView")));
+        homePage.click();
+
+        try {
+            lavHome = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("theappshop.roskachestvo:id/lav_home")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(lavHome != null );
+
+        MobileElement Search = (MobileElement)wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.FrameLayout[@content-desc=\"Поиск\"]/android.widget.ImageView")));
+        Search.click();
+        MobileElement HoverOverBarcode = null;
+        try {
+            HoverOverBarcode = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("theappshop.roskachestvo:id/description_text_view")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(HoverOverBarcode != null );
+
+    }
+
+    @Test
+    public void roskachestvo2(){
+        MobileElement lavHome = null;
+        try {
+            lavHome = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("theappshop.roskachestvo:id/lav_home")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(lavHome != null );
+
+        MobileElement Food = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.ImageView[2]")));
+        Food.click();
+
+        MobileElement Grocery = null;
+        try {
+            Grocery = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//android.widget.LinearLayout[1]/android.widget.ImageView")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(Grocery != null );
+
+        MobileElement clickGrocery = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.ImageView")));
+        clickGrocery.click();
+
+        MobileElement RoundGrainRice = null;
+        try {
+            RoundGrainRice = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.TextView")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(RoundGrainRice != null );
+
+        MobileElement clickRoundGrainRice = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.ImageView")));
+        clickRoundGrainRice.click();
+
+        MobileElement all = null;
+        try {
+            all = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//androidx.recyclerview.widget.RecyclerView/android.widget.CheckedTextView[1]")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(all != null );
+
+
+        MobileElement riceGroats = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.ImageView")));
+        riceGroats.click();
+
+        MobileElement AddToShoppingList = null;
+        try {
+            AddToShoppingList = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("theappshop.roskachestvo:id/add_to_shoplist_button")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(AddToShoppingList != null );
+
+
+        MobileElement clickAddToShoppingList = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(By.id("theappshop.roskachestvo:id/add_to_shoplist_button")));
+        clickAddToShoppingList.click();
+
+        MobileElement productAdded = null;
+        try {
+            productAdded = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(productAdded != null );
+
+        MobileElement close = (MobileElement)  wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("theappshop.roskachestvo:id/close_image_view")));
+        close.click();
+
+        try {
+            AddToShoppingList = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("theappshop.roskachestvo:id/add_to_shoplist_button")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(AddToShoppingList != null );
+}
+
+    @Test
+    public void roskachestvo3(){
+
+        MobileElement lavHome = null;
+        try {
+            lavHome = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("theappshop.roskachestvo:id/lav_home")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(lavHome != null );
+
+        MobileElement clickBeverages = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.RelativeLayout/android.widget.ImageView[2]")));
+        clickBeverages.click();
+
+        MobileElement softDrinks = null;
+        try {
+            softDrinks = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.ImageView")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(softDrinks != null );
+
+        MobileElement clickSoftDrinks = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.ImageView")));
+        clickSoftDrinks.click();
+
+        MobileElement softDrinksText = null;
+        try {
+            softDrinksText = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.TextView")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(softDrinksText != null );
+
+        MobileElement clickKefir = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.ImageView")));
+        clickKefir .click();
+
+        MobileElement all = null;
+        try {
+            all = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//android.widget.CheckedTextView[1]")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(all != null );
+
+        MobileElement clickKefirFat = (MobileElement)  wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[4]/android.widget.LinearLayout/android.widget.ImageView")));
+        clickKefirFat.click();
+
+        MobileElement favorites = null;
+        try {
+            favorites = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("theappshop.roskachestvo:id/favorite_button")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(favorites != null );
+
+
+        MobileElement clickfavorites = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.id("theappshop.roskachestvo:id/favorite_button")));
+        clickfavorites.click();
+
+        MobileElement addedToFavorites = null;
+        try {
+            addedToFavorites = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath("//android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout")));
+        }
+        catch (TimeoutException e)
+        {
+            assertTrue(false);
+        }
+        assertTrue(addedToFavorites != null );
+
+    }
+}
